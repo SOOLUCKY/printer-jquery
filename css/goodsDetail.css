@@ -232,8 +232,12 @@
 }
 
 .form tr td {
-  height: 0.4rem;
+  height: 0.2rem;
   font-size: 0.13rem;
+}
+
+.receiver {
+  height: 0.1rem;
 }
 
 i {
@@ -275,5 +279,9 @@ textarea {
 
 .address-info {
   width: 2.76rem;
+}
+
+.phone, .receiver{
+  height: 0.1rem;;
 }
 
