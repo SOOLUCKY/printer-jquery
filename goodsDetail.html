@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" href="css/goodsDetail.css">
+
+    <title>种子用户火热招募中</title>
+
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 375 * 100 + 'px';
+    </script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.1/css/jquery-weui.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="img"></div>
+        <div class="price-msg">
+            <div class="price-wrapper">
+                <span class="price">￥ 1080</span>
+                <span class="origin-price">原价：￥1280</span>
+            </div>
+            <div class="line">
+                <div class="line-content"></div>
+            </div>
+            <div class="present">
+                <span class="present-num-text">当前剩余数量</span>
+                <span class="present-num">80</span>
+            </div>
+        </div>
+
+        <div class="title">
+            晓豆包家庭版彩色打印机 文档打印 照片打印 移动联
+            网控制打印 家庭专用打印机
+        </div>
+
+        <div class="add-text">
+            <span></span> 家里没有照片纸？加购同步配送~
+        </div>
+        <div class="add-detail-wrapper">
+
+            <div class="add-detail">
+                <div class="add-detail-goods">
+                    <div class="add-detail-icon">
+                        <img src="images/6282F2A8-6749-444E-8004-3C4343307395@2x.png" id="goods1">
+                    </div>
+                    <div class="add-detail-goods-msg">
+                        <img src="images/logo.png" alt>
+                        <span class="span1">晓豆包专用相纸</span>
+                        <span class="span2">规格：50张</span>
+                        <span class="span3">￥12.9</span>
+                        <span class="span4">市场价:￥19.9</span>
+                    </div>
+                </div>
+                <div class="add-detail-goods">
+                    <div class="add-detail-icon">
+                        <img src="images/6282F2A8-6749-444E-8004-3C4343307395@2x.png" id="goods2">
+                    </div>
+                    <div class="add-detail-goods-msg">
+                        <img src="images/logo.png" alt>
+                        <span class="span1">晓豆包专用相纸</span>
+                        <span class="span2">规格：50张</span>
+                        <span class="span3">￥12.9</span>
+                        <span class="span4">市场价:￥19.9</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="add-text">
+            <span></span> 收货信息
+        </div>
+
+        <div class="form-wrapper">
+            <form action="" method="POST">
+                <table class="form">
+                    <tr>
+                        <td class="receiver"><i>*</i> 收件人</th>
+                        <td class="left-td">&nbsp; <input type="text" name="userName" id="userName" placeholder="请输入收货人姓名"
+                                required /></td>
+                    </tr>
+                    <tr>
+                        <td class="phone"> <i>*</i> 联系电话</td>
+                        <td class="left-td">&nbsp; <input type="text" name="userPhone" id="userPhone" placeholder="请输入收货人电话"
+                                required /></td>
+                    </tr>
+                    <tr>
+                        <td class="address"> <i>*</i> 收货地址</td>
+                        <td class="left-td">
+                            <table class="address-info">
+                                <tr>
+                                    <td>&nbsp; <img src="images/C3EF3F24-870F-46B2-B93C-B0545FDA7069@2x.png" id="zq">
+                                    </td>
+                                    <td>自提：森林大地社区店</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp; <img src="images/9D4AD110-98DA-4D75-A5B9-41368B8E171D@2x.png" id="kd">
+                                    </td>
+                                    <td>送货到家(目前仅支持北京市通州区内)</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>送北京市 通州区</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><textarea name="recAddress" id="recAddress"></textarea> </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="pay">
+        支付￥<span id="price">1092.9</span>
+    </div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+<script>
+
+    var isCheckGoods1 = false;
+    var isCheckGoods2 = false;
+    var goodsCheckPath = "images/0031E039-E602-4B11-A439-4F6F65B139DA@2x.png";
+    var goodsNocheckPath = "images/6282F2A8-6749-444E-8004-3C4343307395@2x.png";
+
+    var isCheckZQ = true;
+    var isCheckKD = false;
+    var addressCheckPath = "images/C3EF3F24-870F-46B2-B93C-B0545FDA7069@2x.png";
+    var addressNocheckPath = "images/9D4AD110-98DA-4D75-A5B9-41368B8E171D@2x.png";
+
+    var price = Number(1092.9);
+
+    $("#goods1").click(function () {
+        if (!isCheckGoods1) {
+            $(this).attr('src', goodsCheckPath);
+            isCheckGoods1 = true;
+            price = (Number(price) + 12.9).toFixed(1);
+            $("#price").text(price);
+        } else {
+            $(this).attr('src', goodsNocheckPath);
+            isCheckGoods1 = false;
+            price = (Number(price) - 12.9).toFixed(1);
+            $("#price").text(price);
+        }
+    });
+
+    $("#goods2").click(function () {
+        if (!isCheckGoods2) {
+            $(this).attr('src', goodsCheckPath);
+            isCheckGoods2 = true;
+            price = (Number(price) + 12.9).toFixed(1);
+            $("#price").text(price);
+        } else {
+            $(this).attr('src', goodsNocheckPath);
+            isCheckGoods2 = false;
+            price = (Number(price) - 12.9).toFixed(1);
+            $("#price").text(price);
+        }
+    });
+
+    $("#zq").click(function () {
+
+        if (isCheckZQ) {
+            $(this).attr('src', addressNocheckPath);
+            isCheckZQ = false;
+
+            $("#kd").attr('src', addressCheckPath);
+            isCheckKD = true;
+        } else {
+            $(this).attr('src', addressCheckPath);
+            isCheckZQ = true;
+
+            $("#kd").attr('src', addressNocheckPath);
+            isCheckKD = false;
+        }
+    })
+
+    $("#kd").click(function () {
+
+        if (isCheckKD) {
+            $(this).attr('src', addressNocheckPath);
+            isCheckKD = false;
+
+            $("#zq").attr('src', addressCheckPath);
+            isCheckZQ = true;
+        } else {
+            $(this).attr('src', addressCheckPath);
+            isCheckKD = true;
+
+            $("#zq").attr('src', addressNocheckPath);
+            isCheckZQ = false;
+        }
+    })
+
+    $(".pay").click(function () {
+
+        var name = $("#userName").val();
+        var phone = $("#userPhone").val();
+        var addressTextArea = $("#recAddress").val();
+        var address = "";
+        var addId = "";
+
+        if (isCheckZQ) {
+            address = "森林大地社区店";
+        } else {
+            address = "北京市通州区" + addressTextArea;
+        }
+
+        if (isCheckGoods1 && isCheckGoods2) {
+            addId = "0,1"
+        } else if (isCheckGoods1 && !isCheckGoods2) {
+            addId = "0";
+        } else if (!isCheckGoods1 && isCheckGoods2) {
+            addId = "1";
+        } else {
+            addId = "";
+        }
+
+debugger
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json",
+            url: "/rest/apply/create/order",
+            data: JSON.stringify({ "userName": userName, "userPhone": userPhone, "recAddress": address, "addId": addId }),
+            success: function (result) {
+                console.log(result);
+                if (result.resultCode == 200) {
+                    alert("SUCCESS");
+                }
+                ;
+            },
+            error: function () {
+                alert("异常！");
+            }
+        });
+    })
+</script>
+
+</html>
