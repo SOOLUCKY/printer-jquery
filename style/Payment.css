@@ -1,0 +1,202 @@
+.logistics{
+	width: 90%;
+	margin-left: .1rem;
+}
+.logistics :nth-child(1){
+	color: #E51C23;
+	font-size: .17rem;
+	font-family: PingFang-SC-Bold;
+	font-size: bold;
+	margin-top: .1rem;
+}
+.logistics :nth-child(2){
+	color: #E51C23;
+	line-height: .2rem;
+	font-size: .15rem;
+	margin-top: .1rem;
+	font-family: PingFang-SC-Medium;
+}
+.shop_message{
+	font-size: .14rem;
+}
+.shop_message .pay_time{
+	font-size: .13rem;
+	color: #999;
+	margin-left: .1rem;
+	margin-top: .2rem;
+}
+.shop_one{
+	width: 90%;
+	height: 1rem;
+	display: flex;
+	justify-content: space-between;
+	margin-top: .2rem;
+}
+.specific_message_one{
+	margin-left: .3rem;
+	width: 2.25rem;
+}
+.shop_one .specific_message_one p{
+	color: #333;
+	font-size: .15rem;
+	line-height: .22rem;
+}
+.shop_one .specific_message_one p:nth-child(2){
+		color: red;
+		margin-top: .1rem;
+}
+.shop_message .shop_one img{
+	height: 1rem;
+	width: 1rem;
+	margin-left: .1rem;
+}
+.shop_two{
+	width: 90%;
+	height: 1rem;
+	display: flex;
+	justify-content: flex-start;
+	margin-top: .2rem;
+}
+.specific_message_two{
+	margin-left: .3rem;
+	width: 2.25rem;
+}
+.shop_two .specific_message_two p{
+	color: #333;
+	font-size: .15rem;
+	line-height: .22rem;
+}
+.shop_two .specific_message_two p:nth-child(3){
+		color: red;
+		margin-top: .1rem;
+}
+.shop_two img{
+	height: 1rem;
+	width: 1rem;
+	margin-left: .1rem;
+}
+.shop_three{
+	width: 90%;
+	height: 1rem;
+	display: flex;
+	justify-content: flex-start;
+	margin-top: .2rem;
+}
+.specific_message_three{
+	margin-left: .3rem;
+	width: 2.25rem;
+}
+.shop_three .specific_message_three p{
+	color: #333;
+	font-size: .15rem;
+	line-height: .22rem;
+}
+.shop_three .specific_message_three p:nth-child(3){
+		color: red;
+		margin-top: .1rem;
+}
+.shop_three img{
+	height: 1rem;
+	width: 1rem;
+	margin-left: .1rem;
+}
+#person_message{
+	font-size: .14rem;
+	color: #666;
+	margin-left: .1rem;
+}
+#person_message p{
+	margin-top: .1rem;
+}
+#main_sale{
+	font-size: .16rem;
+}
+#sale_header{
+	color: #F5B545;
+	position: relative;
+	text-align: center;
+	height: .2rem;
+	line-height: .2rem;
+}
+#header_left{
+	display: block;
+	position: absolute;
+	left: .2rem;
+	top: .1rem;
+	height: .01rem;
+	width: 1.27rem;
+	background: #F5B545;
+}
+#header_right{
+	display: block;
+	position: absolute;
+	left: 2.3rem;
+	top: .1rem;
+	height: .01rem;
+	width: 1.27rem;
+	background: #F5B545;
+}
+#Accounts_Number{
+	height: .85rem;
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	margin-left: .2rem;
+	margin-top: .2rem;
+}
+#main_sale #Accounts_Number img{
+	height: .85rem;
+	width: .85rem;
+}
+#Accounts_Message{
+font-size: .14rem;
+margin-left: .2rem;
+}
+#Accounts_Server{
+	height: .85rem;
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	margin-left: .2rem;
+	margin-top: .2rem;
+}
+#main_sale #Accounts_Server img{
+	height: .85rem;
+	width: .85rem;
+}
+#Server_Message{
+font-size: .14rem;
+margin-left: .2rem;
+}
+#sale_footer{
+	width: 3.75rem;
+	height: .50rem;
+	background-color: rgba(245, 181, 69, 1);
+	font-size: .15rem;
+	text-align: center;
+	line-height: .5rem;
+	color: #FFFFFF;
+	margin-top: .1rem;
+}
+#server_tel{
+	height: .5rem;
+	text-align: center;
+	line-height: .5rem;
+	margin-top: .2rem;
+}
+#server_tel img{
+	height: .26rem;
+	width: .26rem;
+	float: left;
+	margin-top: .1rem;
+	margin-left: .8rem;
+}
+#tel_number{
+	float: left;
+	width: 70%;
+	text-align: center;
+}
+#tel_number a{
+	color: #0076FF;
+	text-decoration: underline;
+}

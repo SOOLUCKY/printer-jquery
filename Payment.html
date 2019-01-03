@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="style/main.css"/>
+		<link rel="stylesheet" type="text/css" href="style/Payment.css"/>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div class="logistics">
+				<p>您已成功购买晓豆包家庭版打印机！</p>
+				<p>我们正在努力备货中，后续将安排专人尽快为您送货~</p>
+			</div>
+			<div class="shop_message">
+				<p class="pay_time">下单时间： <span>2018.12.25  05:20:13</span></p>
+				<div class="shop_one">
+					<img src="images/5C9180C0-9D27-41E0-A203-491BA0439A2E@15x.png" />
+					<div class="specific_message_one">
+						<p>晓豆包家庭版彩色打印机		文档打印		照片打印		移动联网控制打印	家庭专用打印机</p>
+						<p>￥1080</p>
+					</div>
+				</div>
+				<div class="shop_two">
+					<img src="images/5C9180C0-9D27-41E0-A203-491BA0439A2E@15x.png" />
+					<div class="specific_message_two">
+						<p>晓豆包专用相纸</p>
+						<p>规格：<span>50</span>张</p>
+						<p>￥1080</p>
+					</div>
+				</div>
+				<div class="shop_three">
+					<img src="images/5C9180C0-9D27-41E0-A203-491BA0439A2E@15x.png" />
+					<div class="specific_message_three">
+						<p>晓豆包专用相纸</p>
+						<p>规格：<span>50</span>张</p>
+						<p>￥1080</p>
+					</div>
+				</div>
+				<div id="person_message">
+					
+				</div>
+				
+			</div>
+		</div>
+		<div id="main_sale">
+			<div id="sale_header">
+				<span id="header_left"></span>
+				售后服务
+				<span id="header_right"></span>
+			</div>
+			<div id="Accounts_Number">
+				<img src="images/QR%20code/095C230D-8F68-40E3-80B9-57A71805DA90@1x.png" >
+				<div id="Accounts_Message">
+					请识别左侧二维码，关注“晓豆包打印”微信公众号，点击底部“种子用户火热招募中”按钮，获取订单信息。
+				</div>
+			</div>
+			<div id="Accounts_Server">
+				<img src="images/server/E5638473-1B22-473D-8A8E-250D7F49E137@1x.png" >
+				<div id="Server_Message">
+					请识别左侧二维码，添加晓豆包客服微信，随时解答您的疑惑
+				</div>
+			</div>
+			<div id="server_tel">
+				<img src="images/layer-b2f64881981f9e0e556ea8623f58858d.png" >
+				<div id="tel_number">
+					客服电话：<a href="tel:400-602-6662">400-602-6662</a> 
+				</div>
+			</div>
+			<div id="sale_footer">
+				将晓豆包分享给好友
+			</div>
+		</div>
+	</body>
+</html>
+<script src="http://file.xdbao.com.cn/jquery-easyui-1.5.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script type="text/javascript">
+	document.documentElement.style.fontSize = document.documentElement.clientWidth / 375 * 100 + 'px';
+	$.ajax({
+		type:"post",
+		async:true,
+		cache:true,
+		dataType: "json",
+		contentType: "application/json",
+		url: "/rest/apply/create/order",
+		data: JSON.stringify({ "userName": userName, "userPhone": userPhone, "recAddress": address, "addId": addId }),
+		success:function(res){
+			var str = "";
+						str += `
+								<p>收货人：<span>${res.data.userName}</span> </p>
+								<p>联系电话：<span>${res.data.userPhone}</span> </p>
+								<p>收货地址：<span>${res.data.recAddress}</span> </p>
+								`
+					$(".firstrwo").html(str);
+		}
+	});
+</script>
