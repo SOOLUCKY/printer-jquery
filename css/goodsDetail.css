@@ -1,11 +1,11 @@
 .wrapper {
   width: 100%;
+  background-color: #ffffff;
 }
 
 .img {
+  width: 100%;
   height: 3.75rem;
-  background: url("../images/logo.png") no-repeat;
-  background-size: 100%;
 }
 
 .price-msg {
@@ -15,8 +15,7 @@
 
 .price-wrapper {
   height: 100%;
-  width: 2.7rem;
-  flex: 230;
+  flex: 70%;
 }
 
 .price {
@@ -46,7 +45,7 @@
 
 .present {
   height: 100%;
-  flex: 102;
+  flex: 25%;
 }
 
 .present-num-text {
@@ -77,7 +76,7 @@
 }
 
 .line {
-  flex: 10;
+  flex: 5%;
 }
 
 .line-content {
@@ -106,7 +105,7 @@
   font-size: 0.15rem;
   line-height: 0.21rem;
   border-bottom: 0.01rem solid #f5f5f5;
-  left: 20px;
+  left: 0.2rem;
   color: rgba(51, 51, 51, 1);
   text-align: left;
   font-family: PingFang-SC-Medium;
@@ -115,11 +114,10 @@
 .add-text span {
   display: inline-block;
   width: 0.05rem;
-  height: 0.15rem;
+  height: 0.12rem;
   background-color: #f5b545;
   margin-left: 0.09rem;
-  margin-top: 0.18rem;
-  margin-left: 0.05rem;
+  margin-top: 0.2rem;
 }
 
 .add-detail-wrapper {
@@ -141,6 +139,7 @@
 }
 
 .add-detail-goods .add-detail-goods-msg {
+  padding-top: 0.15rem;
   float: right;
   width: 1.3rem;
   height: 100%;
@@ -249,12 +248,13 @@ i {
 td img {
   width: 0.16rem;
   height: 0.16rem;
+  margin-top: 0;
 }
 
 td input {
   width: 2rem;
   height: 0.3rem;
-  border: 1px solid rgba(187, 187, 187, 1);
+  border: 0.01rem solid rgba(187, 187, 187, 1);
   padding-left: 0.05rem;
 }
 
@@ -263,7 +263,7 @@ td input {
   height: 0.5rem;
   background-color: #eea835 !important;
   position: fixed;
-  bottom: 0px;
+  bottom: 0rem;
   font-size: 0.17rem;
   color: #ffffff !important;
   line-height: 0.47rem;
@@ -274,14 +274,24 @@ td input {
 textarea {
   width: 2.17rem;
   height: 0.6rem;
-  border: 1px solid rgba(187, 187, 187, 1);
+  border: 0.01rem solid rgba(187, 187, 187, 1);
+  padding-left: 0.05rem;
+  font-size: 0.13rem;
 }
 
 .address-info {
   width: 2.76rem;
 }
 
-.phone, .receiver{
-  height: 0.1rem;;
+.address-t {
+  box-sizing: border-box;
+  margin-bottom: 0.2rem;
 }
 
+ .address-t img {
+  /* vertical-align: middle; */
+}
+
+.phone, .receiver {
+  height: 0.1rem;
+}
